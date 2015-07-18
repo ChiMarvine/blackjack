@@ -28,10 +28,12 @@ h2 {
 
 .player-hand-container {
   margin-left: 45%;
+  position: relative;
 }
 
 .dealer-hand-container {
   margin-left: 45%;
+  position: relative;
 }
 
 .hit-button {
@@ -43,7 +45,7 @@ h2 {
   border-radius: 100px;
 }
 
-.stand-button {
+.stand-button, .play-again {
   font-family: 'Gochi Hand', cursive;
   font-size: 30px;
   height: auto;
@@ -53,6 +55,13 @@ h2 {
 
 .covered {
   background-image: url("card-back.png");
+}
+
+.result {
+  margin-left: 45%;
+  position: absolute;
+  color: red;
+  font-size: 100px;
 }
 
 .covered img {
