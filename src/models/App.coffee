@@ -8,13 +8,9 @@ class window.App extends Backbone.Model
     @get('playerHand').on 'checkWinner', => 
      @get('playerHand').scores()
      @get('dealerHand').at(0).flip()
-
-
-     recurse = (scores) ->
-      if @get('dealerHand').scores()[0] < 17
-        @get('dealerHand').hit()
-        if @get('dealerHand').scores()[0] < 17
-          recurse()
-        else
-          @get('dealerHand').score()[0]
-      recurse()
+     if @get('dealerHand').scores()[0] < 17
+       @get('dealerHand').hit()
+     if @get('dealerHand').scores()[0] < this.get('playerHand').scores()[0]
+      alert 'YOU WIN'
+     if @get('dealerHand').scores()[0] > this.get('playerHand').scores()[0]
+      alert 'DEALER WIN'
