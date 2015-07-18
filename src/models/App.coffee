@@ -26,13 +26,3 @@ class window.App extends Backbone.Model
      if @get('dealerHand').scores()[0] is this.get('playerHand').scores()[0]
       alert 'TIE!'
       location.reload() 
-     
-        
-
-
-
-
-
-
-
-

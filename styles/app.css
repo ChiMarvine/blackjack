@@ -3,12 +3,8 @@
   border: solid 1px black;
   width: 120px;
   border-radius: 5px;
-  height: 170px;
+  height: 168px;
   margin-right: 20px;
-}
-
-.covered {
-  background-image: url("card-back.png");
 }
 
 .hand {
@@ -16,15 +12,18 @@
 }
 
 body {
-  background-image: url("background.jpg");
+  background-image: url("Blackjack.gif");
+  background-size: auto;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 35px;
 }
 
 .score {
-  color: red;
+  color: white;
 }
 
 h2 {
-  color: blue;
+  color: white;
 }
 
 .player-hand-container {
@@ -33,4 +32,29 @@ h2 {
 
 .dealer-hand-container {
   margin-left: 45%;
+}
+
+.hit-button {
+  margin-left: 45%;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+  height: auto;
+  width: auto;
+  border-radius: 100px;
+}
+
+.stand-button {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+  height: auto;
+  width: auto;
+  border-radius: 100px;
+}
+
+.covered {
+  background-image: url("card-back.png");
+}
+
+.covered img {
+  visibility: hidden;
 }
