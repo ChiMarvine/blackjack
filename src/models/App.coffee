@@ -6,7 +6,15 @@ class window.App extends Backbone.Model
     @set 'playerHand', deck.dealPlayer()
     @set 'dealerHand', deck.dealDealer()
     @get('playerHand').on 'checkWinner', => 
-     console.log(@get('playerHand').scores())
+     @get('playerHand').scores()
      @get('dealerHand').at(0).flip()
-     if @get('dealerHand').scores() < 17
-      @get('dealerHand').hit()
+
+
+     recurse = (scores) ->
+      if @get('dealerHand').scores()[0] < 17
+        @get('dealerHand').hit()
+        if @get('dealerHand').scores()[0] < 17
+          recurse()
+        else
+          @get('dealerHand').score()[0]
+      recurse()
