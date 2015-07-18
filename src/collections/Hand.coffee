@@ -5,8 +5,9 @@ class window.Hand extends Backbone.Collection
 
   hit: ->
     @add(@deck.pop())
-    if @scores()[0] > 21
-       alert 'BUST!'
+    @trigger 'bust', this
+    # if @scores()[0] > 21
+    #    alert 'BUST!'
     
 
   hasAce: -> @reduce (memo, card) ->
