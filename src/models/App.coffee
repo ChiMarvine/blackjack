@@ -36,15 +36,3 @@ class window.App extends Backbone.Model
 
 
 
-
-
-
-
-
-
-
-
-     # @get('playerHand').on 'bust', =>
-     #  debugger 
-     #  @get('playerHand').scores()[0] > 21
-     #  alert 'PLAYER BUST'

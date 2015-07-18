@@ -1,16 +1,36 @@
 .card {
   float: left;
   border: solid 1px black;
-  width: 100px;
+  width: 120px;
   border-radius: 5px;
-  height: 140px;
+  height: 170px;
   margin-right: 20px;
 }
 
 .covered {
-  background-color: black;
+  background-image: url("card-back.png");
 }
 
 .hand {
   overflow: auto;
+}
+
+body {
+  background-image: url("background.jpg");
+}
+
+.score {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+.player-hand-container {
+  margin-left: 45%;
+}
+
+.dealer-hand-container {
+  margin-left: 45%;
 }
