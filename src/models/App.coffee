@@ -10,7 +10,11 @@ class window.App extends Backbone.Model
      @get('dealerHand').at(0).flip()
      if @get('dealerHand').scores()[0] < 17
        @get('dealerHand').hit()
+     if @get('dealerHand').scores()[0] > 21 
+       alert 'DEALER BUST'  
      if @get('dealerHand').scores()[0] < this.get('playerHand').scores()[0]
       alert 'YOU WIN'
      if @get('dealerHand').scores()[0] > this.get('playerHand').scores()[0]
       alert 'DEALER WIN'
+     if @get('dealerHand').scores()[0] is this.get('playerHand').scores()[0]
+      alert 'TIE!' 

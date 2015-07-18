@@ -24,7 +24,7 @@ class window.Hand extends Backbone.Collection
     [@minScore(), @minScore() + 10 * @hasAce()]
 
   stand: -> 
-    @trigger 'checkWinner'
+    @trigger 'checkWinner', this
  
 
 
