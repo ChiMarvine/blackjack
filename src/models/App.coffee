@@ -13,12 +13,12 @@ class window.App extends Backbone.Model
     @get('playerHand').on 'checkWinner', =>
      @get('playerHand').scores()
      @get('dealerHand').at(0).flip()
-     if @get('dealerHand').scores()[0] < 17
+     while @get('dealerHand').scores()[0] < 17
        @get('dealerHand').hit()
      if @get('dealerHand').scores()[0] > 21
        $('.hit-button').hide()
        $('.stand-button').hide()
-       $('<div class="result"></div>').text('DEALER BUST, YOU WIN').appendTo($('body'))
+       $('<div class="result"></div>').text('DEALER BUST').appendTo($('body'))
      if @get('dealerHand').scores()[0] < this.get('playerHand').scores()[0]
         $('.hit-button').hide()
         $('.stand-button').hide()
