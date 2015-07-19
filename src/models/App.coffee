@@ -18,16 +18,16 @@ class window.App extends Backbone.Model
      if @get('dealerHand').scores()[0] > 21
        $('.hit-button').hide()
        $('.stand-button').hide()
-      $('<div class="result"></div>').text('DEALER BUST, YOU WIN').appendTo($('body'))
+       $('<div class="result"></div>').text('DEALER BUST, YOU WIN').appendTo($('body'))
      if @get('dealerHand').scores()[0] < this.get('playerHand').scores()[0]
         $('.hit-button').hide()
         $('.stand-button').hide()
-       $('<div class="result"></div>').text('YOU WIN').appendTo($('body'))
+        $('<div class="result"></div>').text('YOU WIN').appendTo($('body'))
      if @get('dealerHand').scores()[0] > this.get('playerHand').scores()[0] and @get('dealerHand').scores()[0] < 22
         $('.hit-button').hide()
         $('.stand-button').hide()
-       $('<div class="result"></div>').text('DEALER WIN').appendTo($('body'))
+        $('<div class="result"></div>').text('DEALER WIN').appendTo($('body'))
      if @get('dealerHand').scores()[0] is this.get('playerHand').scores()[0]
         $('.hit-button').hide()
         $('.stand-button').hide()
-       $('<div class="result"></div>').text('DRAW').appendTo($('body'))
+        $('<div class="result"></div>').text('DRAW').appendTo($('body'))
